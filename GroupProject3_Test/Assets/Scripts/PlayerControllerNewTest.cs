@@ -17,13 +17,6 @@ public class PlayerControllerNewTest : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
-    //invisibility variables
-    public MeshRenderer playerMesh; //pull mesh from player model
-    float cooldownTimer = 1;
-    float invisibilityTimer = 1;
-
-    private bool cooldownActive = false; //is the cooldown active
-
     // Start is called before the first frame update
     void Start()
     {
@@ -64,27 +57,6 @@ public class PlayerControllerNewTest : MonoBehaviour
 
         controller.Move(moveVector * Time.deltaTime);
         lastMove = moveVector;
-
-        //if the player presses F
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-          //if cooldown is not on, run invisibility and set cooldown on
-          if (cooldownActive == false)
-          {
-            Invisible();
-            cooldownActive = true;
-          }
-
-          //if cooldown is on, wait for timer to run its course and then turn cooldown off
-          else if (cooldownActive != false)
-          {
-            cooldownTimer -= Time.deltaTime;
-            if (cooldownTimer <= 0)
-            {
-              cooldownActive = false;
-            }
-          }
-        }
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
@@ -98,19 +70,6 @@ public class PlayerControllerNewTest : MonoBehaviour
             }
         }
         Debug.DrawRay(hit.point, hit.normal, Color.red, 1.25f);
-    }
-
-    //function to use Invisibility
-    void Invisible()
-    {
-      //reduce alpha, go invisible
-      playerMesh.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
-      //return to normal after a set time
-      invisibilityTimer -= Time.deltaTime;
-      if (invisibilityTimer <= 0)
-      {
-        playerMesh.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-      }
     }
 
 }
