@@ -19,14 +19,19 @@ public class CooldownTest : MonoBehaviour
 
     void Update()
     {
+        nextInvisibilityUse -= Time.deltaTime; //countdown for invis by frame
+        if (nextInvisibilityUse <= 0f)
+        {
+            playerMesh.GetComponent<MeshRenderer>().material = opaqueMat;
+            nextInvisibilityUse = cooldownTime;
+        }
 
-      if (Time.time > nextInvisibilityUse) //if you can use it
       {
         if (Input.GetKeyDown(KeyCode.F))
         {
-          invisibleTime = 5f;
+            invisibleTime = 5f;
             Invisible();
-            nextInvisibilityUse = Time.time + cooldownTime; //countdown to next ability use 
+            nextInvisibilityUse = Time.deltaTime + cooldownTime; //countdown to next ability use
           }
         }
     }
@@ -41,18 +46,10 @@ public class CooldownTest : MonoBehaviour
 
       void Invisible()
       {
-
         if (invisibleTime > 0f)
         {
           //reduce alpha, go invisible
           playerMesh.GetComponent<MeshRenderer>().material = transparentMat;
-          invisibleTime -= Time.deltaTime;
         }
-
-        else if (invisibleTime <= 0f)
-        {
-          playerMesh.GetComponent<MeshRenderer>().material = opaqueMat;
-        }
-
       }
 }

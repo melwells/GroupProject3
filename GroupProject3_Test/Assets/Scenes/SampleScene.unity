@@ -604,9 +604,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c242c2840a603946b377af9e50f5ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
   playerMesh: {fileID: 1908376281}
   opaqueMat: {fileID: 2100000, guid: 73daba3b69f35264790c55d73a900fa2, type: 2}
   transparentMat: {fileID: 2100000, guid: 069b31d0be4b3454abb8e0a3e0b3b198, type: 2}
+  cooldownTime: 3
+  invisibleTime: 0
+  nextInvisibilityUse: 0
 --- !u!114 &863774829
 MonoBehaviour:
   m_ObjectHideFlags: 0
