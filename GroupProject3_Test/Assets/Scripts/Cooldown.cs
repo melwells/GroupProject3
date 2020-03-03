@@ -17,6 +17,7 @@ public class Cooldown : MonoBehaviour
 
     void Update()
     {
+
       //if the player presses F
       if (Input.GetKeyDown(KeyCode.F))
       {
@@ -30,6 +31,7 @@ public class Cooldown : MonoBehaviour
         if (Time.time > cooldownTimer)
         {
           timer = Time.time + cooldownTimer;
+          cooldownActive = false;
         }
 
       /*  cooldownTimer -= Time.deltaTime;
@@ -53,7 +55,6 @@ public class Cooldown : MonoBehaviour
       void Invisible()
       {
         //reduce alpha, go invisible
-        //playerMesh.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
         playerMesh.GetComponent<MeshRenderer>().material = transparentMat;
 
         //return to normal after a set time
@@ -63,11 +64,11 @@ public class Cooldown : MonoBehaviour
           playerMesh.GetComponent<MeshRenderer>().material = opaqueMat;
         } */
 
-        if (Time.time > timer)
+        /* if (Time.time > timer)
         {
           timer = Time.time + invisibilityTimer;
           playerMesh.GetComponent<MeshRenderer>().material = opaqueMat;
-        }
+        } */
       }
     }
 }
