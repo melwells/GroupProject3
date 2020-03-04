@@ -13,10 +13,15 @@ public class PlayerControllerNewTest : MonoBehaviour
     private float verticalVelocity;
     private CharacterController controller;
 
-    public Transform groundCheck;
     public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemyMask;
+
+    public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+
+    public int attackDamage = 50;
 
     // Start is called before the first frame update
     void Start()
@@ -83,6 +88,11 @@ public class PlayerControllerNewTest : MonoBehaviour
 
     void Attack()
     {
+        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask); //Detecs enemies in attack range
 
+        foreach(Collider enemy in hitEnemies)
+        {
+            enemy.GetComponent<EnemyController>().GetHit(attackDamage);
+        }
     }
 }
