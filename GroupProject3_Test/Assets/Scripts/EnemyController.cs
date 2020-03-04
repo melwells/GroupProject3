@@ -24,6 +24,7 @@ public class EnemyController : MonoBehaviour
 
     void Death()
     {
+        //Disables enemy without destroying it
         GetComponent<Collider>().enabled = false;
         GetComponent<MeshRenderer>().enabled = false;
         this.enabled = false;

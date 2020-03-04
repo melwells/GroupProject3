@@ -86,13 +86,14 @@ public class PlayerControllerNewTest : MonoBehaviour
         }
     }
 
+   //Attacking, duh
     void Attack()
     {
-        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask); //Detecs enemies in attack range
+        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyMask); //Detecs enemies in attack range and stores in an array
 
         foreach(Collider enemy in hitEnemies)
         {
-            enemy.GetComponent<EnemyController>().GetHit(attackDamage);
+            enemy.GetComponent<EnemyController>().GetHit(attackDamage); //Damages each enemy within array/attack range
         }
     }
 }

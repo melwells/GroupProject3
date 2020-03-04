@@ -50,7 +50,7 @@ public class CooldownTest : MonoBehaviour
         {
           //reduce alpha, go invisible
           playerMesh.GetComponent<MeshRenderer>().material = transparentMat;
-            playerMesh.GetComponent<MeshRenderer>().material.color = new Color(1f, 1f, 1f, 0f);
+            playerMesh.GetComponent<MeshRenderer>().material.color = new Color(1f, 1f, 1f, 0f); //Changes alpha of material to transparent 
         }
       }
 }
