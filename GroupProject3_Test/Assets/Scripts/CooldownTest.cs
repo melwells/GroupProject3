@@ -12,6 +12,8 @@ public class CooldownTest : MonoBehaviour
   public float cooldownTime; //control how long cooldown lasts
   public float invisibleTime; //how long you can stay invis for
 
+  public bool invisBool = false; //public bool for targets to see
+
   private float nextInvisibilityUse; //when can you next use the ability
 
 
@@ -23,6 +25,8 @@ public class CooldownTest : MonoBehaviour
         if (nextInvisibilityUse <= 0f)
         {
             playerMesh.GetComponent<MeshRenderer>().material = opaqueMat;
+            invisBool = false;
+            Debug.Log("Invisible bool = " + invisBool); //debug notification. am I invisible?
             nextInvisibilityUse = cooldownTime;
         }
 
@@ -31,6 +35,8 @@ public class CooldownTest : MonoBehaviour
         {
             invisibleTime = 5f;
             Invisible();
+            invisBool = true; //debug notification. am I invisible?
+            Debug.Log("Invisible bool = " + invisBool);
             nextInvisibilityUse = Time.deltaTime + cooldownTime; //countdown to next ability use
           }
         }
@@ -50,7 +56,7 @@ public class CooldownTest : MonoBehaviour
         {
           //reduce alpha, go invisible
           playerMesh.GetComponent<MeshRenderer>().material = transparentMat;
-            playerMesh.GetComponent<MeshRenderer>().material.color = new Color(1f, 1f, 1f, 0f); //Changes alpha of material to transparent 
+          playerMesh.GetComponent<MeshRenderer>().material.color = new Color(1f, 1f, 1f, 0f); //Changes alpha of material to transparent
         }
       }
 }

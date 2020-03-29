@@ -5,11 +5,19 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public int maxHealth = 100;
+    public CooldownTest player; //calling cooldowntest script for the invisBool variable
+
     int currentHealth;
+
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+    }
+
+    void Update()
+    {
+      Attack();
     }
 
     public void GetHit(int damage)
@@ -28,5 +36,18 @@ public class EnemyController : MonoBehaviour
         GetComponent<Collider>().enabled = false;
         GetComponent<MeshRenderer>().enabled = false;
         this.enabled = false;
+    }
+
+    void Attack()
+    {
+      if (player.invisBool == true) //if the player is invisible
+      {
+        //do not attack
+      }
+
+      if (player.invisBool == false) //if the player is visible
+      {
+        //attack
+      }
     }
 }
