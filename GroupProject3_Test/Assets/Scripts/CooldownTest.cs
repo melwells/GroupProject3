@@ -5,7 +5,7 @@ using UnityEngine;
 public class CooldownTest : MonoBehaviour
 {
   //invisibility variables
-  public MeshRenderer playerMesh; //pull mesh from player model
+  public SkinnedMeshRenderer playerMesh; //pull mesh from player model
   public Material opaqueMat;
   public Material transparentMat;
 
@@ -16,7 +16,6 @@ public class CooldownTest : MonoBehaviour
 
   private float nextInvisibilityUse; //when can you next use the ability
 
-  
 
   //private bool cooldownActive = false; //is the cooldown active
 
@@ -25,7 +24,7 @@ public class CooldownTest : MonoBehaviour
         nextInvisibilityUse -= Time.deltaTime; //countdown for invis by frame
         if (nextInvisibilityUse <= 0f)
         {
-            playerMesh.GetComponent<MeshRenderer>().material = opaqueMat;
+            playerMesh.GetComponent<SkinnedMeshRenderer>().material = opaqueMat;
             invisBool = false;
             Debug.Log("Invisible bool = " + invisBool); //debug notification. am I invisible?
             nextInvisibilityUse = cooldownTime;
@@ -56,8 +55,8 @@ public class CooldownTest : MonoBehaviour
         if (invisibleTime > 0f)
         {
          //reduce alpha, go invisible
-          playerMesh.GetComponent<MeshRenderer>().material = transparentMat;
-          playerMesh.GetComponent<MeshRenderer>().material.color = new Color(1f, 1f, 1f, 0f); //Changes alpha of material to transparent
+          playerMesh.GetComponent<SkinnedMeshRenderer>().material = transparentMat;
+          playerMesh.GetComponent<SkinnedMeshRenderer>().material.color = new Color(1f, 1f, 1f, 0f); //Changes alpha of material to transparent
 
         }
       }
