@@ -55,9 +55,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CooldownTest.cs" />
      <Compile Include="Assets\Scripts\DoorEnemyController.cs" />
-     <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Scripts\Obsolete Code\EnemyController.cs" />
      <Compile Include="Assets\Scripts\Obsolete Code\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerControllerNewTest.cs" />

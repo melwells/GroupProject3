@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
-{ /*
+{
     public static bool isPaused = false;
     public GameObject pauseMenuUI;
 
@@ -45,12 +45,12 @@ public class PauseMenu : MonoBehaviour
     {
       Debug.Log("Main menu loading..");
       Time.timeScale = 1f;
-      SceneManager.LoadScene("Main");
+      SceneManager.LoadScene("Menu");
     }
 
     public void Quit()
     {
       Debug.Log("Quit");
       Application.Quit();
-    } */
+    }
 }
