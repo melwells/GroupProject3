@@ -11,8 +11,12 @@ public class DoorEnemyController : MonoBehaviour
     public GameObject playerTarget;
     public float lookRadius = 5f;
     public NavMeshAgent agent;
+    Animator anim;
+
+    public float hitRange = 1f;
 
     Vector3 startPos;
+    Vector3 currentPos;
 
     Transform target;
 
@@ -26,6 +30,8 @@ public class DoorEnemyController : MonoBehaviour
         target = playerTarget.transform; //target the player
         agent = GetComponent<NavMeshAgent>();
         startPos = this.transform.position;
+        anim = GetComponent<Animator>();
+        currentPos = transform.position;
     }
 
     void FixedUpdate()
@@ -45,6 +51,7 @@ public class DoorEnemyController : MonoBehaviour
 
     void Death()
     {
+        anim.SetInteger("condition", 0);
         //Disables enemy without destroying it
         GetComponent<Collider>().enabled = false;
         GetComponent<MeshRenderer>().enabled = false;
@@ -57,8 +64,15 @@ public class DoorEnemyController : MonoBehaviour
 
       if (player.invisBool == true) //if the player is invisible
       {
+        anim.SetInteger("condition", 0);
         //this.transform.position = startPos;
         agent.SetDestination(startPos); //walk back to door
+        anim.SetInteger("condition", 1);
+      }
+
+      if (currentPos == startPos)
+      {
+        anim.SetInteger("condition", 0);
       }
 
       if (player.invisBool == false) //if the player is visible
@@ -66,8 +80,13 @@ public class DoorEnemyController : MonoBehaviour
         //attack, chase player
         if (distance <= lookRadius)
         {
+          anim.SetInteger("condition", 1);
           agent.SetDestination(target.position);
           transform.LookAt(target.transform);
+          if (distance <= hitRange)
+          {
+            anim.SetInteger("condition", 2);
+          }
         }
       }
     }
