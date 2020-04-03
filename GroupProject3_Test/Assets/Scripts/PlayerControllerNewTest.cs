@@ -145,13 +145,18 @@ public class PlayerControllerNewTest : MonoBehaviour
         Debug.Log("lives = " + lives);
         Destroy(other.GetComponent<Collider>().gameObject);
       }
+
+      if (other.tag == "KeyCard")
+      {
+        WinGame();
+      }
     }
 
     void WinGame()
     {
       Cursor.visible = true;
       Cursor.lockState = CursorLockMode.None;
-      //SceneManager.LoadScene("Win");
+      SceneManager.LoadScene("Win");
     }
 
     void Respawn()
@@ -163,7 +168,7 @@ public class PlayerControllerNewTest : MonoBehaviour
       {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        //SceneManager.LoadScene("Lose");
+        SceneManager.LoadScene("Lose");
       }
     }
 }
