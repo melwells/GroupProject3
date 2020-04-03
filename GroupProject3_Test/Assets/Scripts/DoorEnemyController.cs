@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Audio;
 
 public class DoorEnemyController : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class DoorEnemyController : MonoBehaviour
     public float lookRadius = 5f;
     public NavMeshAgent agent;
     Animator anim;
+
+    public AudioSource audio;
 
     public float hitRange = 1f;
 
@@ -86,6 +89,7 @@ public class DoorEnemyController : MonoBehaviour
           if (distance <= hitRange)
           {
             anim.SetInteger("condition", 2);
+            audio.Play();
           }
         }
       }

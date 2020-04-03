@@ -29,6 +29,8 @@ public class PlayerControllerNewTest : MonoBehaviour
 
     Vector3 originalPos;
 
+    Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,7 @@ public class PlayerControllerNewTest : MonoBehaviour
         originalPos = this.transform.position;
         lives = 5;
         score = 0;
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -45,6 +48,8 @@ public class PlayerControllerNewTest : MonoBehaviour
 
     void Update()
     {
+        anim.SetInteger("lizCondition", 2);
+
         //Movement and Jumping
         moveVector = Vector3.zero;
         moveVector.x = Input.GetAxis("Horizontal"); //X axis input
@@ -58,7 +63,8 @@ public class PlayerControllerNewTest : MonoBehaviour
 
             if(Input.GetButtonDown("Jump"))
             {
-                verticalVelocity = jumpforce; //Causes the character to jump
+              verticalVelocity = jumpforce; //Causes the character to jump
+              anim.SetInteger("lizCondition", 1);
             }
         }
         else //Slowly brings object back to the ground, and locks in direction of the jump
@@ -75,9 +81,17 @@ public class PlayerControllerNewTest : MonoBehaviour
         controller.Move(moveVector * Time.deltaTime);
         lastMove = moveVector;
 
+        if (!Input.anyKey)
+        {
+          {
+            anim.SetInteger("lizCondition", 0);
+          }
+        }
+
         //Combat
         if (Input.GetMouseButtonDown(0))
         {
+            anim.SetInteger("lizCondition", 3);
             Attack();
         }
     }
@@ -89,6 +103,7 @@ public class PlayerControllerNewTest : MonoBehaviour
         {
             if(Input.GetButtonDown("Jump")) //Bounces character away from the wall
             {
+                anim.SetInteger("lizCondition", 1);
                 verticalVelocity = jumpforce;
                 moveVector = hit.normal * speed;
             }
@@ -102,13 +117,13 @@ public class PlayerControllerNewTest : MonoBehaviour
 
         foreach(Collider enemy in hitEnemies)
         {
-            enemy.GetComponent<EnemyController>().GetHit(attackDamage); //Damages each enemy within array/attack range
+            enemy.GetComponent<DoorEnemyController>().GetHit(attackDamage); //Damages each enemy within array/attack range
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
-      if (other.tag == "Enemy")
+      if (other.tag == "DoorEnemy")
       {
         //reset position, lose lives
         Respawn();

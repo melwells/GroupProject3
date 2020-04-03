@@ -16,6 +16,7 @@ public class CooldownTest : MonoBehaviour
 
   private float nextInvisibilityUse; //when can you next use the ability
 
+  
 
   //private bool cooldownActive = false; //is the cooldown active
 
@@ -54,9 +55,10 @@ public class CooldownTest : MonoBehaviour
       {
         if (invisibleTime > 0f)
         {
-          //reduce alpha, go invisible
+         //reduce alpha, go invisible
           playerMesh.GetComponent<MeshRenderer>().material = transparentMat;
           playerMesh.GetComponent<MeshRenderer>().material.color = new Color(1f, 1f, 1f, 0f); //Changes alpha of material to transparent
+
         }
       }
 }
