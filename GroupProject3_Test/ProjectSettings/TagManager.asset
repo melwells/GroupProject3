@@ -8,6 +8,7 @@ TagManager:
   - Coin
   - EnergyDrink
   - DoorEnemy
+  - KeyCard
   layers:
   - Default
   - TransparentFX
