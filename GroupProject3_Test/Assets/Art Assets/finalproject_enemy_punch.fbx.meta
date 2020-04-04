@@ -1,0 +1,274 @@
+fileFormatVersion: 2
+guid: 230f2c424ea34aa41afd6c3aa4d4a6bc
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: centerBone
+    100002: //RootNode
+    100004: head
+    100006: head_end
+    100008: leftBicep
+    100010: leftCalf
+    100012: leftFoot
+    100014: leftFoot_end
+    100016: leftForearm
+    100018: leftHand
+    100020: leftHand_end
+    100022: leftThigh
+    100024: neck
+    100026: rightBicep
+    100028: rightCalf
+    100030: rightFoot
+    100032: rightFoot_end
+    100034: rightForearm
+    100036: rightHand
+    100038: rightHand_end
+    100040: rightThigh
+    100042: torso
+    100044: waist
+    100046: Armature
+    400000: centerBone
+    400002: //RootNode
+    400004: head
+    400006: head_end
+    400008: leftBicep
+    400010: leftCalf
+    400012: leftFoot
+    400014: leftFoot_end
+    400016: leftForearm
+    400018: leftHand
+    400020: leftHand_end
+    400022: leftThigh
+    400024: neck
+    400026: rightBicep
+    400028: rightCalf
+    400030: rightFoot
+    400032: rightFoot_end
+    400034: rightForearm
+    400036: rightHand
+    400038: rightHand_end
+    400040: rightThigh
+    400042: torso
+    400044: waist
+    400046: Armature
+    7400000: Armature|ArmatureAction.001
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Armature|ArmatureAction.001' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation DOF
+      on avatar to improve retargeting quality.\n\t'torso' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'leftBicep' has translation
+      animation that will be discarded.\n\t'rightBicep' has translation animation
+      that will be discarded.\n\t'rightThigh' has translation animation that will
+      be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton:
+    - name: finalproject_enemy(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cube
+      parentName: finalproject_enemy(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Armature
+      parentName: finalproject_enemy(Clone)
+      position: {x: -0, y: -3.7071023, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: centerBone
+      parentName: Armature
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: waist
+      parentName: centerBone
+      position: {x: -0, y: 0.01, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: torso
+      parentName: waist
+      position: {x: -0, y: 0.00754745, z: 0}
+      rotation: {x: 0.14969058, y: 2.7318761e-17, z: 2.731876e-17, w: 0.9887329}
+      scale: {x: 1, y: 1, z: 1}
+    - name: neck
+      parentName: torso
+      position: {x: -3.3087224e-26, y: 0.031661186, z: 5.9604643e-10}
+      rotation: {x: 0.36042297, y: -0.000000111197046, z: -0.000000042965752, w: 0.93278897}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: head
+      parentName: neck
+      position: {x: 3.0813052e-16, y: 0.0035658276, z: 0.0000000023841857}
+      rotation: {x: -0.433189, y: 0.000000107443626, z: 0.000000051640146, w: 0.9013031}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head_end
+      parentName: head
+      position: {x: -0, y: 0.013365334, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leftBicep
+      parentName: torso
+      position: {x: -0.019846512, y: 0.028448075, z: -0.013268292}
+      rotation: {x: -0.055380575, y: 0.1366931, z: 0.921837, w: 0.35841954}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+    - name: leftForearm
+      parentName: leftBicep
+      position: {x: 0.0000000042058383, y: 0.025865601, z: -2.9802322e-10}
+      rotation: {x: 0.09401719, y: 0.69986403, z: 0.07506052, w: 0.70407176}
+      scale: {x: 0.99999994, y: 0.9999997, z: 1}
+    - name: leftHand
+      parentName: leftForearm
+      position: {x: 3.7252902e-11, y: 0.017347429, z: -0.0000000017605635}
+      rotation: {x: 0.072100736, y: -0.0077675884, z: -0.10388199, w: 0.9919424}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+    - name: leftHand_end
+      parentName: leftHand
+      position: {x: -0, y: 0.012527157, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rightBicep
+      parentName: torso
+      position: {x: 0.019243265, y: 0.028188089, z: -0.013187725}
+      rotation: {x: 0.05023047, y: 0.13468887, z: 0.9221321, w: -0.35917723}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: rightForearm
+      parentName: rightBicep
+      position: {x: 0.000000004945323, y: 0.025865601, z: 6.519258e-11}
+      rotation: {x: 0.09359825, y: 0.5268913, z: 0.07558231, w: 0.84137523}
+      scale: {x: 0.99999994, y: 0.99999976, z: 0.9999999}
+    - name: rightHand
+      parentName: rightForearm
+      position: {x: 0.0000000014528632, y: 0.017347425, z: 0.0000000026635825}
+      rotation: {x: -0.09602552, y: 0.19595538, z: -0.08227438, w: 0.9724256}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.99999994}
+    - name: rightHand_end
+      parentName: rightHand
+      position: {x: -0, y: 0.012527157, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leftThigh
+      parentName: centerBone
+      position: {x: -0.013703543, y: 0.0026546526, z: -0.0000000046241433}
+      rotation: {x: 0.000030949443, y: 0.00000003724875, z: 0.9999977, w: 0.002154901}
+      scale: {x: 1.0000093, y: 1, z: 1}
+    - name: leftCalf
+      parentName: leftThigh
+      position: {x: -3.1717104e-10, y: 0.018273572, z: -1.08002494e-14}
+      rotation: {x: -0.00006281495, y: 0.70714015, z: 0.000062868596, w: 0.70707345}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: leftFoot
+      parentName: leftCalf
+      position: {x: -5.6208927e-14, y: 0.019059112, z: 0.0000000012855829}
+      rotation: {x: -0.5675905, y: 0.8232309, z: -0.009653994, w: -0.006223712}
+      scale: {x: 0.99999994, y: 1.0000004, z: 0.9999999}
+    - name: leftFoot_end
+      parentName: leftFoot
+      position: {x: -0, y: 0.02148726, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rightThigh
+      parentName: centerBone
+      position: {x: 0.01310029, y: 0.0023824715, z: -0.0000000046484163}
+      rotation: {x: 0.000030886862, y: 0.0000001705322, z: 0.9999977, w: -0.0021550201}
+      scale: {x: 1.0000093, y: 1, z: 1}
+    - name: rightCalf
+      parentName: rightThigh
+      position: {x: 0.0000000012334805, y: 0.018273572, z: 7.81597e-15}
+      rotation: {x: 0.00006282243, y: 0.70714, z: -0.00006277242, w: 0.7070735}
+      scale: {x: 1, y: 0.9999998, z: 0.99999994}
+    - name: rightFoot
+      parentName: rightCalf
+      position: {x: -5.6274982e-14, y: 0.019059116, z: 6.429661e-10}
+      rotation: {x: -0.56767255, y: 0.8232152, z: -0.00021752596, w: -0.008039538}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: rightFoot_end
+      parentName: rightFoot
+      position: {x: -0, y: 0.021487257, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 226265053ec3df14e9561a8f0ae7106c,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

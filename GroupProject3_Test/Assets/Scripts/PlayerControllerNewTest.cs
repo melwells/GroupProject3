@@ -27,6 +27,14 @@ public class PlayerControllerNewTest : MonoBehaviour
 
     private int score;
 
+    public AudioSource[] playerSounds;
+    public AudioSource a_jump;
+    public AudioSource a_run;
+    public AudioSource a_attack;
+
+    public AudioSource a_coin;
+    public AudioSource a_powerup;
+
     Vector3 originalPos;
 
     Animator anim;
@@ -39,6 +47,13 @@ public class PlayerControllerNewTest : MonoBehaviour
         lives = 5;
         score = 0;
         anim = GetComponent<Animator>();
+
+        playerSounds = GetComponents<AudioSource>();
+        a_jump = playerSounds[0];
+        a_run = playerSounds[1];
+        a_attack = playerSounds[2];
+        a_coin = playerSounds[3];
+        a_powerup = playerSounds[4];
     }
 
     void FixedUpdate()
@@ -55,7 +70,8 @@ public class PlayerControllerNewTest : MonoBehaviour
         moveVector.x = Input.GetAxis("Horizontal"); //X axis input
         moveVector.z = Input.GetAxis("Vertical"); //Z axis input
 
-        moveVector = transform.right * moveVector.x + transform.forward * moveVector.z; //Adjusts inputs to move character relative to the camera
+        moveVector = transform.right * moveVector.x + transform.forward * moveVector.z;
+        //Adjusts inputs to move character relative to the camera
 
         if (controller.isGrounded)
         {
@@ -64,6 +80,7 @@ public class PlayerControllerNewTest : MonoBehaviour
             if(Input.GetButtonDown("Jump"))
             {
               verticalVelocity = jumpforce; //Causes the character to jump
+                a_jump.Play();
               anim.SetInteger("lizCondition", 1);
             }
         }
@@ -81,11 +98,18 @@ public class PlayerControllerNewTest : MonoBehaviour
         controller.Move(moveVector * Time.deltaTime);
         lastMove = moveVector;
 
+
+
         if (!Input.anyKey)
         {
           {
             anim.SetInteger("lizCondition", 0);
+                a_run.Stop();
           }
+        }
+        else
+        {
+            a_run.Play();
         }
 
         //Combat
@@ -93,6 +117,7 @@ public class PlayerControllerNewTest : MonoBehaviour
         {
             anim.SetInteger("lizCondition", 3);
             Attack();
+            a_attack.Play();
         }
     }
 
@@ -106,6 +131,7 @@ public class PlayerControllerNewTest : MonoBehaviour
                 anim.SetInteger("lizCondition", 1);
                 verticalVelocity = jumpforce;
                 moveVector = hit.normal * speed;
+                a_jump.Play();
             }
         }
     }
@@ -135,6 +161,7 @@ public class PlayerControllerNewTest : MonoBehaviour
         score = score + 1;
         Debug.Log("score = " + score);
         Destroy(other.GetComponent<Collider>().gameObject);
+            a_coin.Play();
       }
 
       if (other.tag == "EnergyDrink")
@@ -144,11 +171,13 @@ public class PlayerControllerNewTest : MonoBehaviour
         lives = 5;
         Debug.Log("lives = " + lives);
         Destroy(other.GetComponent<Collider>().gameObject);
+            a_powerup.Play();
       }
 
       if (other.tag == "KeyCard")
       {
         WinGame();
+            a_coin.Play();
       }
     }
 

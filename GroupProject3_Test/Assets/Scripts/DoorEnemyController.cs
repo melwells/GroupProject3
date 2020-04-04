@@ -14,7 +14,9 @@ public class DoorEnemyController : MonoBehaviour
     public NavMeshAgent agent;
     Animator anim;
 
+    public AudioSource[] sounds;
     public AudioSource audio;
+    public AudioSource walk;
 
     public float hitRange = 1f;
 
@@ -35,6 +37,10 @@ public class DoorEnemyController : MonoBehaviour
         startPos = this.transform.position;
         anim = GetComponent<Animator>();
         currentPos = transform.position;
+
+       sounds = GetComponents<AudioSource>();
+        audio = sounds[0];
+        walk = sounds[1];
     }
 
     void FixedUpdate()
@@ -71,11 +77,14 @@ public class DoorEnemyController : MonoBehaviour
         //this.transform.position = startPos;
         agent.SetDestination(startPos); //walk back to door
         anim.SetInteger("condition", 1);
+        walk.Play();
+            
       }
 
       if (currentPos == startPos)
       {
         anim.SetInteger("condition", 0);
+            walk.Stop();
       }
 
       if (player.invisBool == false) //if the player is visible
@@ -86,6 +95,7 @@ public class DoorEnemyController : MonoBehaviour
           anim.SetInteger("condition", 1);
           agent.SetDestination(target.position);
           transform.LookAt(target.transform);
+                walk.Play();
           if (distance <= hitRange)
           {
             anim.SetInteger("condition", 2);

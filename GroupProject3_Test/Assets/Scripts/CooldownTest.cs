@@ -16,6 +16,8 @@ public class CooldownTest : MonoBehaviour
 
   private float nextInvisibilityUse; //when can you next use the ability
 
+    public AudioSource a_invisibility;
+
 
   //private bool cooldownActive = false; //is the cooldown active
 
@@ -36,6 +38,7 @@ public class CooldownTest : MonoBehaviour
             invisibleTime = 5f;
             Invisible();
             invisBool = true; //debug notification. am I invisible?
+                a_invisibility.Play();
             Debug.Log("Invisible bool = " + invisBool);
             nextInvisibilityUse = Time.deltaTime + cooldownTime; //countdown to next ability use
           }
