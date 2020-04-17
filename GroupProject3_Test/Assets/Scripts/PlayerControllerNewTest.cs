@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayerControllerNewTest : MonoBehaviour
 {
+    public GameObject player;
+    public Transform Level2SpawnPoint;
+    public Transform Level3SpawnPoint;
+
     private Vector3 moveVector;
     private Vector3 lastMove;
     public float speed;
@@ -39,6 +43,9 @@ public class PlayerControllerNewTest : MonoBehaviour
 
     Animator anim;
 
+    bool keyCard1;
+    bool keyCard2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +61,9 @@ public class PlayerControllerNewTest : MonoBehaviour
         a_attack = playerSounds[2];
         a_coin = playerSounds[3];
         a_powerup = playerSounds[4];
+
+        keyCard1 = false;
+        keyCard2 = false;
     }
 
     void FixedUpdate()
@@ -119,6 +129,17 @@ public class PlayerControllerNewTest : MonoBehaviour
             Attack();
             a_attack.Play();
         }
+
+        if (keyCard1 == true)
+        {
+          Level2();
+          keyCard1 = false;
+        }
+
+        if (keyCard2 == true)
+        { Level3();
+          keyCard2 = false;
+        }
     }
 
     //Wall Jumping
@@ -176,9 +197,37 @@ public class PlayerControllerNewTest : MonoBehaviour
 
       if (other.tag == "KeyCard")
       {
+        Debug.Log("picked up");
+        Destroy (other.GetComponent<Collider>().gameObject);
+        //Level2();
+        keyCard1 = true;
+      }
+
+     if(other.tag == "KeyCard2")
+      {
+        Debug.Log("picked up");
+        Destroy (other.GetComponent<Collider>().gameObject);
+        //Level2();
+        keyCard2 = true;
+      }
+
+      if (other.tag == "FinalKeyCard")
+      {
         WinGame();
             a_coin.Play();
       }
+    }
+
+    void Level2()
+    {
+      player.transform.position = Level2SpawnPoint.position;
+      Debug.Log(player.transform.position * Time.deltaTime);
+    }
+
+    void Level3()
+    {
+      player.transform.position = Level3SpawnPoint.position;
+      Debug.Log(player.transform.position * Time.deltaTime);
     }
 
     void WinGame()

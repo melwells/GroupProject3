@@ -9,6 +9,8 @@ TagManager:
   - EnergyDrink
   - DoorEnemy
   - KeyCard
+  - KeyCard2
+  - FinalKeyCard
   layers:
   - Default
   - TransparentFX
