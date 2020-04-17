@@ -65,6 +65,7 @@ public class DoorEnemyController : MonoBehaviour
         GetComponent<Collider>().enabled = false;
         GetComponent<MeshRenderer>().enabled = false;
         this.enabled = false;
+        Destroy(this.gameObject);
     }
 
     void Attack()
@@ -78,7 +79,7 @@ public class DoorEnemyController : MonoBehaviour
         agent.SetDestination(startPos); //walk back to door
         anim.SetInteger("condition", 1);
         walk.Play();
-            
+
       }
 
       if (currentPos == startPos)

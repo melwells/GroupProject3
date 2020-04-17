@@ -1,8 +1,12 @@
 Win64
 PlayerPath?
-C:/Users/Lopez/OneDrive/Documents/Unity Builds/GroupProject3.exe
+C:/Users/mwell/Desktop/Build/GroupProject3.exe
 SceneListBegin?
+Assets/Scenes/Main.unity
 Assets/Scenes/Game.unity
+Assets/Scenes/HowToPlay.unity
+Assets/Scenes/Lose.unity
+Assets/Scenes/Win.unity
 SceneListEnd?
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 01aa15e337e3a9c62f15153dfac6d589 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
