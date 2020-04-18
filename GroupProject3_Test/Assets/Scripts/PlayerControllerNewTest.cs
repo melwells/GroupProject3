@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerControllerNewTest : MonoBehaviour
@@ -28,8 +29,10 @@ public class PlayerControllerNewTest : MonoBehaviour
 
     public int attackDamage = 50;
     public int lives;
+    public Text livesText;
 
     private int score;
+    public Text scoreText; 
 
     public AudioSource[] playerSounds;
     public AudioSource a_jump;
@@ -73,6 +76,9 @@ public class PlayerControllerNewTest : MonoBehaviour
 
     void Update()
     {
+        scoreText.text = "Score: " + score;
+        livesText.text = "Lives: " + lives;
+
         anim.SetInteger("lizCondition", 2);
 
         //Movement and Jumping
