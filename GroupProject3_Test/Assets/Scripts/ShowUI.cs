@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//for UI instructions
+
 public class ShowUI : MonoBehaviour
 {
     public GameObject uiObject;
@@ -21,8 +23,8 @@ public class ShowUI : MonoBehaviour
     }
     IEnumerator WaitForSec()
     {
-        yield return new WaitForSeconds(10);
-        //Destroy(uiObject);
+        yield return new WaitForSeconds(5);
+        Destroy(uiObject);
         Destroy(gameObject);
     }
 }
