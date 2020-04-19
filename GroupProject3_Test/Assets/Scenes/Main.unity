@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   click: {fileID: 1522188}
+  highScore: {fileID: 0}
 --- !u!82 &1522188
 AudioSource:
   m_ObjectHideFlags: 0
@@ -370,7 +371,7 @@ GameObject:
   - component: {fileID: 58856522}
   - component: {fileID: 58856521}
   m_Layer: 5
-  m_Name: StartText
+  m_Name: HighScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1150,6 +1151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   click: {fileID: 550853452}
+  highScore: {fileID: 1184075391}
 --- !u!82 &550853452
 AudioSource:
   m_ObjectHideFlags: 0

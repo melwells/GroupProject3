@@ -1,17 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
     public AudioSource click;
+    public Text highScore;
+
+    void Start()
+    {
+      highScore.text = "High Score: " + PlayerPrefs.GetInt("HighScore").ToString();
+    }
 
   public void StartGame()
   {
     //SceneManager.LoadScene("Game", LoadSceneMode.Additive);
     SceneManager.LoadScene("Game");
-        click.Play();
+    click.Play();
 
   }
 
@@ -31,4 +38,5 @@ public class Menu : MonoBehaviour
     {
       SceneManager.LoadScene("Main");
     }
+
 }

@@ -32,6 +32,7 @@ public class PlayerControllerNewTest : MonoBehaviour
     public Text livesText;
 
     private int score;
+
     public Text scoreText;
     public Text highScore;
 
