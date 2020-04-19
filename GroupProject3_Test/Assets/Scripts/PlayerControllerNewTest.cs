@@ -32,7 +32,8 @@ public class PlayerControllerNewTest : MonoBehaviour
     public Text livesText;
 
     private int score;
-    public Text scoreText; 
+    public Text scoreText;
+    public Text highScore;
 
     public AudioSource[] playerSounds;
     public AudioSource a_jump;
@@ -67,6 +68,8 @@ public class PlayerControllerNewTest : MonoBehaviour
 
         keyCard1 = false;
         keyCard2 = false;
+
+        highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
     }
 
     void FixedUpdate()
@@ -78,6 +81,13 @@ public class PlayerControllerNewTest : MonoBehaviour
     {
         scoreText.text = "Score: " + score;
         livesText.text = "Lives: " + lives;
+
+        if (score > PlayerPrefs.GetInt("HighScore", 0))
+        {
+          PlayerPrefs.SetInt("HighScore", score);
+          highScore.text = score.ToString();
+        }
+
 
         anim.SetInteger("lizCondition", 2);
 
