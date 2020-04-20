@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5427,7 +5427,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 28
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 70
     m_Alignment: 0
@@ -5461,7 +5461,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -15}
+  m_AnchoredPosition: {x: -140, y: -81}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 1, y: 1}
 --- !u!1001 &579404621
@@ -16999,7 +16999,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 28
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 70
     m_Alignment: 0
@@ -17033,7 +17033,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -53}
+  m_AnchoredPosition: {x: -140, y: -119.00003}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 1, y: 1}
 --- !u!1001 &1618521360
@@ -21504,7 +21504,7 @@ PrefabInstance:
     - target: {fileID: 9185066609369988454, guid: 9264dd6f2e2ee9a4f9f290c09225fd05,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -126.17707
+      value: -127.6
       objectReference: {fileID: 0}
     - target: {fileID: 9185066609369988454, guid: 9264dd6f2e2ee9a4f9f290c09225fd05,
         type: 3}
@@ -21514,7 +21514,7 @@ PrefabInstance:
     - target: {fileID: 9185066609369988454, guid: 9264dd6f2e2ee9a4f9f290c09225fd05,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.681665
+      value: 12.7
       objectReference: {fileID: 0}
     - target: {fileID: 9185066609369988454, guid: 9264dd6f2e2ee9a4f9f290c09225fd05,
         type: 3}
@@ -22460,7 +22460,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -10}
+  m_AnchoredPosition: {x: 109, y: -76.00003}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2131600294
@@ -22487,7 +22487,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 28
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 70
     m_Alignment: 0
