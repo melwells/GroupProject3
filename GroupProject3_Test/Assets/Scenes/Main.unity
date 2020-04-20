@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   click: {fileID: 1522188}
-  highScore: {fileID: 0}
+  highScore: {fileID: 1184075391}
 --- !u!82 &1522188
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2072,7 +2072,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1522187}
-        m_MethodName: HowToPlay
+        m_MethodName: DeleteHS
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

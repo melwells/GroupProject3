@@ -39,4 +39,10 @@ public class Menu : MonoBehaviour
       SceneManager.LoadScene("Main");
     }
 
+    public void DeleteHS()
+    {
+      PlayerPrefs.DeleteKey("HighScore");
+      highScore.text = "High Score: " + PlayerPrefs.GetInt("HighScore").ToString();
+    }
+
 }
