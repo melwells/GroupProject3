@@ -18,6 +18,10 @@ public class DoorEnemyController : MonoBehaviour
     public AudioSource audio;
     public AudioSource walk;
 
+    PlayerControllerNewTest score;
+    PlayerControllerNewTest scoreText;
+    PlayerControllerNewTest highScoreText;
+
     public float hitRange = 1f;
 
     Vector3 startPos;

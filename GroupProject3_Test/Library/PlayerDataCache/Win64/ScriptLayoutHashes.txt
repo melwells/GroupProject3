@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/Jacob Nodarse/Desktop/FINAL_BUILD/GroupProject3.exe
+C:/Users/mwell/Desktop/Build/GroupProject3.exe
 SceneListBegin?
 Assets/Scenes/Main.unity
 Assets/Scenes/Game.unity
@@ -119,7 +119,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 6cef1a2f5ae3af78f4815d6fb076c559 Assembly-CSharp.dll:.PlayerController
-725777b3e944f01e1fab7847781711c7 Assembly-CSharp.dll:.PlayerControllerNewTest
+c9d7b52fb627cf71b14d71f8ebfb5ddb Assembly-CSharp.dll:.PlayerControllerNewTest
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset

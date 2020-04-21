@@ -31,7 +31,7 @@ public class PlayerControllerNewTest : MonoBehaviour
     public int lives;
     public Text livesText;
 
-    private int score;
+    public int score;
 
     public Text scoreText;
     public Text highScore;
@@ -196,7 +196,7 @@ public class PlayerControllerNewTest : MonoBehaviour
 
       if (other.tag == "Coin")
       {
-        score = score + 1;
+        score = score + 10;
         Debug.Log("score = " + score);
         Destroy(other.GetComponent<Collider>().gameObject);
             a_coin.Play();
@@ -204,7 +204,7 @@ public class PlayerControllerNewTest : MonoBehaviour
 
       if (other.tag == "EnergyDrink")
       {
-        score = score + 10;
+        score = score + 20;
         Debug.Log("score = " + score);
         lives = 5;
         Debug.Log("lives = " + lives);
